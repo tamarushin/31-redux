@@ -16,6 +16,9 @@
 * Students will learn to lift application state to better control one way data flow
 * Students will learn to create and import sass partials
 
+## Demo
+[Redux Demo](https://github.com/codefellows-seattle-javascript-401n5/31-redux-demo)
+
 ## Requirements
 #### Configuration
 Your lab directory must include
