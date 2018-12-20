@@ -6,22 +6,22 @@ export const categoryCreate = (category) => {
 
   return {
     type: 'CATEGORY_CREATE',
-    payload: category
-  }
-}
+    payload: category,
+  };
+};
 
 export const categoryUpdate = (category) => {
 
   return {
     type: 'CATEGORY_UPDATE',
-    payload: category
-  }
-}
+    payload: category,
+  };
+};
 
 export const categoryDestroy = (category) => {
 
   return {
     type: 'CATEGORY_DESTROY',
-    payload: category
-  }
-}
+    payload: category,
+  };
+};

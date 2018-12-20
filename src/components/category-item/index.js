@@ -23,7 +23,7 @@ export default class CategoryItem extends Component {
     this.setState({
       editing: false,
     });
-    this.Props.onComplete(category);
+    this.props.onComplete(category);
   }
 
   deleteCategory() {
@@ -34,10 +34,14 @@ export default class CategoryItem extends Component {
   render() {
     return (
       <div>
-        <span onClick={this.showEditForm}>{this.Props.category.name}</span>
-        <span id='budget-item' onClick={this.showEditForm}>${this.Props.category.budget}</span>
+        <span onClick={this.showEditForm}>{this.props.category.name}</span>
+        <span id='budget-item' onClick={this.showEditForm}>${this.props.category.budget}</span>
         <button onClick={this.deleteCategory}>Delete</button>
-        {this.state.editing && <CategoryForm onComplete={this.updateCategory} buttonText="update" category={this.Props.category} />}
+        {this.state.editing && <CategoryForm
+          onComplete={this.updateCategory}
+          buttonText="update"
+          category={this.props.category}
+        />}
       </div>
     );
   }

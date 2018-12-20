@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class CategoryForm extends Component {
 
-  constructor(Props) {
-    super(Props);
-    this.defaultState = {
-      name: '',
-      budget: '',
+
+  constructor(props) {
+
+    super(props);
+    this.state = {
+      name: props.category ? props.category.name : '',
+      budget: props.category ? props.category.budget : '',
+      id: props.category ? props.category.id : '',
+      timestamp: props.category ? props.category.timestamp : null
     };
-
-    const initialState = this.Props.category || this.defaultState;
-
-    this.state = { ...initialState };
 
     this.onSubmit = this.onSubmit.bind(this);
     this.handleCategoryChange = this.handleCategoryChange.bind(this);
@@ -20,8 +20,8 @@ class CategoryForm extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-    this.Props.onComplete(this.state);
-    this.setState({ ...this.defaultState });
+    this.props.onComplete(this.state);
+    this.setState({ ...this.state });
   }
 
   handleCategoryChange(event) {
@@ -33,6 +33,7 @@ class CategoryForm extends Component {
   }
 
   render() {
+
     return (
       <form onSubmit={this.onSubmit}>
         <label >NAME</label>
@@ -51,7 +52,7 @@ class CategoryForm extends Component {
           value={this.state.budget}
           onChange={this.handleBudgetChange}
         />
-        <button>{this.Props.buttonText}</button>
+        <button>{this.props.buttonText}</button>
       </form>
     );
   }
