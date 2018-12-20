@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Dashboard from '../dashboard';
-import store from '../../lib/store';
+import Dashboard from '../dashboard/index';
+import createStore from '../../lib/store';
+
+const store = createStore();
 
 export default class App extends Component {
   render() {

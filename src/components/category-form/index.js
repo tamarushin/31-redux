@@ -35,6 +35,7 @@ class CategoryForm extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
+        <label >NAME</label>
         <input
           name="name"
           placeholder="name"
@@ -42,6 +43,7 @@ class CategoryForm extends Component {
           value={this.state.name}
           onChange={this.handleCategoryChange}
         />
+        <label > BUDGET</label>
         <input
           budget="budget"
           placeholder="budget"

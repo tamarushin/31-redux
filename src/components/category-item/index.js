@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CategoryForm from '../catagory-form/index';
-import './category-item.scss';
+import CategoryForm from '../category-form/index.js';
+
 
 export default class CategoryItem extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ export default class CategoryItem extends Component {
   }
 
   deleteCategory() {
-    this.Props.onDelete(this.Props.category);
+    this.props.onDelete(this.props.category);
   }
 
 
