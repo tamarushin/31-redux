@@ -9,3 +9,6 @@
   * Submit a link to your pull request on canvas
   * Submit a question, observation, and how long you spent on canvas
 
+
+  ## Tama Rushin
+
